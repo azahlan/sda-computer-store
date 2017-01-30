@@ -5,10 +5,11 @@ private String type;
 private int cost;
 private int size;
 
-public Display(String manufacturer,String type,int cost){
+public Display(String manufacturer,String type,int cost, int size){
   this.manufacturer= manufacturer;
   this.type= type;
   this.cost= cost;
+  this.size= size;
 }
 
 public String getManufacturer(){
