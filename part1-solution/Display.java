@@ -35,7 +35,7 @@ public void setCost(int cost){
   this.cost= cost;
 }
 
-public int getSize(){
+public int getsize(){
   return size;
 }
 

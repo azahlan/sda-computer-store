@@ -26,7 +26,7 @@ public void setType(String type){
   this.type= type;
 }
 
-public void setCost(String cost){
+public void setCost(int cost){
   this.cost= cost;
 }
 

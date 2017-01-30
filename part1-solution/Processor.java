@@ -1,4 +1,4 @@
-public void Processor{
+public class Processor{
 
 private String manufacturer;
 private String architecture;
@@ -8,7 +8,7 @@ private int cost;
 
 public Processor(String manufacturer,int clockSpeed,int cost, String architecture){
   this.manufacturer=manufacturer;
-  this.clockSpeed=clockspeed;
+  this.clockSpeed=clockSpeed;
   this.cost=cost;
   this.architecture=architecture;
 }
@@ -37,11 +37,11 @@ public void setCost(int cost){
   this.cost=cost;
 }
 
-public void getArchitecture(){
+public String getArchitecture(){
   return architecture;
 }
 
-public String setArchitecture(String architecture){
+public void setArchitecture(String architecture){
   this.architecture=architecture;
 }
 

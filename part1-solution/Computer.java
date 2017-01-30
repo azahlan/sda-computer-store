@@ -1,4 +1,3 @@
-
 public class Computer {
 
 private Processor theProcessor;
