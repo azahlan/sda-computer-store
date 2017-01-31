@@ -1,0 +1,37 @@
+public class Main{
+
+
+public static void main(String[] args){
+/*
+System.out.println(c.totalCost( ));
+
+Processor p = new Processor("AMD",2000,6000,"x86");
+System.out.println(p.getDescription());
+
+HardDisk h = new HardDisk("Toshiba","SSD",7000);
+System.out.println(h.getDescription());
+
+Display d = new Display("ASUS","IPS",9000,17);
+System.out.println(d.getDescription());
+*/
+Computer c1 = new Computer();
+ComputerStore cs = new ComputerStore();
+cs.addComputer(c1);
+//cs.printAllComputers();
+//cs.printTotalValue();
+//Computer c2 = new Computer();
+Processor p = new Processor("AMD",3000,6000,"x64");
+HardDisk h = new HardDisk("WD","SSD",4500);
+Display d= new Display("BENQ","LCD",9000,24);
+
+Computer c3 = new Computer(p,h,d);
+cs.addComputer(c3);
+//Computer com = new Computer();
+//com =cs.findMostExpensiveComputerv1();
+//cs.findMostExpensiveComputerv1().printComputerSummary();
+//cs.findMostExpensiveComputerv2().printComputerSummary();
+//cs.findMostExpensiveComputerv3().printComputerSummary();
+cs.findMostExpensiveComputerv4().printComputerSummary();
+}
+
+}

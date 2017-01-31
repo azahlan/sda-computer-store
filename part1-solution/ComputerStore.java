@@ -2,9 +2,11 @@ import java.util.*;
 public class ComputerStore{
 
 private ArrayList<Computer> computers;
+private ArrayList<Component> components;
 
 public ComputerStore(){
 computers = new ArrayList<>();
+components = new ArrayList<>();
 }
 
 public boolean addComputer(Computer newComputer){
@@ -28,7 +30,8 @@ public void printTotalValue(){
   int sum=0;
   for(Computer c: computers)
   {
-    System.out.println(c.totalCost());
+    sum=sum+c.totalCost();
+    System.out.println(sum);
   }
 }
 
@@ -51,6 +54,7 @@ int index = 1;
 while(index<computers.size()){
   if(currentMostExpensive.totalCost()<computers.get(index).totalCost())
     currentMostExpensive=computers.get(index);
+    index++;
   }
   return currentMostExpensive;
 }
@@ -68,9 +72,28 @@ public Computer findMostExpensiveComputerv4(){
 Computer currentMostExpensive=computers.get(0);
 Iterator<Computer> itr= computers.iterator();
 while(itr.hasNext()){
-  if(currentMostExpensive.totalCost()<itr.next().totalCost())
-    currentMostExpensive=itr.next();
+  Computer tempMostExpensive=itr.next();
+  if(currentMostExpensive.totalCost()<tempMostExpensive.totalCost()){
+    currentMostExpensive = tempMostExpensive;
+  }
 }
 return currentMostExpensive;
 }
+
+public int totalCostOfComponents(){
+  int totalCost=0;
+  for(Component c : components)
+  totalCost=totalCost+c.getCost();
+  return totalCost;
+}
+
+public void totalCostOfComponents(String component_type){
+if((Object)component_type instanceof Component)
+{
+int totalCost=0;
+for(Component c : components)
+totalCost=totalCost+c.getCost();
+}
+}
+
 }
