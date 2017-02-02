@@ -84,16 +84,37 @@ public int totalCostOfComponents(){
   int totalCost=0;
   for(Component c : components)
   totalCost=totalCost+c.getCost();
+
   return totalCost;
 }
 
-public void totalCostOfComponents(String component_type){
-if((Object)component_type instanceof Component)
+/*
+*
+*@throws ClassNotFoundException
+*/
+
+public void totalCostOfComponents(String component_type) throws ClassNotFoundException
 {
-int totalCost=0;
-for(Component c : components)
-totalCost=totalCost+c.getCost();
-}
+
+  int totalCost=0;
+  try {
+    for(Component c : components)
+    {
+      Class test = Class.forName(component_type);
+
+      if(test.newInstance() instanceof Component)
+      totalCost=totalCost+c.getCost();
+    }
+    System.out.println("The total cost of components of type "+component_type+":"+totalCost);
+  }
+  catch (Exception e)
+  {
+    System.out.println("Invalid type"+e.getMessage());
+  }
 }
 
+public void addComponent(String name,Component c){
+  components.add(c);
+  components.
+}
 }
