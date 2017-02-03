@@ -1,7 +1,7 @@
 public class Main{
 
 
-public static void main(String[] args)throws ClassNotFoundException {
+public static void main(String[] args){
 /*
 System.out.println(c.totalCost( ));
 
@@ -24,7 +24,7 @@ Processor p = new Processor("AMD",3000,6000,"x64");
 HardDisk h = new HardDisk("WD","SSD",4500);
 Display d= new Display("BENQ","LCD",9000,24);
 
-Computer c3 = new Computer(p,h,d);
+Computer c3 = new Computer();
 cs.addComputer(c3);
 //Computer com = new Computer();
 //com =cs.findMostExpensiveComputerv1();
@@ -32,6 +32,7 @@ cs.addComputer(c3);
 //cs.findMostExpensiveComputerv2().printComputerSummary();
 //cs.findMostExpensiveComputerv3().printComputerSummary();
 //cs.findMostExpensiveComputerv4().printComputerSummary();
+cs.addComponent(p);
 cs.totalCostOfComponents("Processor");
 
 }

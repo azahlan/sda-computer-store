@@ -26,73 +26,73 @@ public void printAllComputers(){
     c.printComputerSummary();
 }
 
-public void printTotalValue(){
-  int sum=0;
-  for(Computer c: computers)
-  {
-    sum=sum+c.totalCost();
-    System.out.println(sum);
-  }
-}
-
-//public int getTotalPrice(){
-//return computers.totalCost();
-//}
-
-public Computer findMostExpensiveComputerv1(){
-Computer currentMostExpensive=computers.get(0);
-for(int i=1;i<computers.size();i++){
-  if(currentMostExpensive.totalCost()<computers.get(i).totalCost())
-    currentMostExpensive=computers.get(i);
-  }
-  return currentMostExpensive;
-}
-
-public Computer findMostExpensiveComputerv2(){
-Computer currentMostExpensive=computers.get(0);
-int index = 1;
-while(index<computers.size()){
-  if(currentMostExpensive.totalCost()<computers.get(index).totalCost())
-    currentMostExpensive=computers.get(index);
-    index++;
-  }
-  return currentMostExpensive;
-}
-
-public Computer findMostExpensiveComputerv3(){
-Computer currentMostExpensive=computers.get(0);
-  for(Computer c: computers){
-    if(currentMostExpensive.totalCost()<c.totalCost())
-      currentMostExpensive=c;
-  }
-  return currentMostExpensive;
-}
-
-public Computer findMostExpensiveComputerv4(){
-Computer currentMostExpensive=computers.get(0);
-Iterator<Computer> itr= computers.iterator();
-while(itr.hasNext()){
-  Computer tempMostExpensive=itr.next();
-  if(currentMostExpensive.totalCost()<tempMostExpensive.totalCost()){
-    currentMostExpensive = tempMostExpensive;
-  }
-}
-return currentMostExpensive;
-}
-
-public int totalCostOfComponents(){
-  int totalCost=0;
-  for(Component c : components)
-  totalCost=totalCost+c.getCost();
-
-  return totalCost;
-}
+// public void printTotalValue(){
+//   int sum=0;
+//   for(Computer c: computers)
+//   {
+//     sum=sum+c.totalCost();
+//     System.out.println(sum);
+//   }
+// }
+//
+// //public int getTotalPrice(){
+// //return computers.totalCost();
+// //}
+//
+// public Computer findMostExpensiveComputerv1(){
+// Computer currentMostExpensive=computers.get(0);
+// for(int i=1;i<computers.size();i++){
+//   if(currentMostExpensive.totalCost()<computers.get(i).totalCost())
+//     currentMostExpensive=computers.get(i);
+//   }
+//   return currentMostExpensive;
+// }
+//
+// public Computer findMostExpensiveComputerv2(){
+// Computer currentMostExpensive=computers.get(0);
+// int index = 1;
+// while(index<computers.size()){
+//   if(currentMostExpensive.totalCost()<computers.get(index).totalCost())
+//     currentMostExpensive=computers.get(index);
+//     index++;
+//   }
+//   return currentMostExpensive;
+// }
+//
+// public Computer findMostExpensiveComputerv3(){
+// Computer currentMostExpensive=computers.get(0);
+//   for(Computer c: computers){
+//     if(currentMostExpensive.totalCost()<c.totalCost())
+//       currentMostExpensive=c;
+//   }
+//   return currentMostExpensive;
+// }
+//
+// public Computer findMostExpensiveComputerv4(){
+// Computer currentMostExpensive=computers.get(0);
+// Iterator<Computer> itr= computers.iterator();
+// while(itr.hasNext()){
+//   Computer tempMostExpensive=itr.next();
+//   if(currentMostExpensive.totalCost()<tempMostExpensive.totalCost()){
+//     currentMostExpensive = tempMostExpensive;
+//   }
+// }
+// return currentMostExpensive;
+// }
+//
+// public int totalCostOfComponents(){
+//   int totalCost=0;
+//   for(Component c : components)
+//   totalCost=totalCost+c.getCost();
+//
+//   return totalCost;
+// }
 
 /*
 *
 *@throws ClassNotFoundException
 */
-
+/*
 public void totalCostOfComponents(String component_type) throws ClassNotFoundException
 {
 
@@ -112,9 +112,8 @@ public void totalCostOfComponents(String component_type) throws ClassNotFoundExc
     System.out.println("Invalid type"+e.getMessage());
   }
 }
-
-public void addComponent(String name,Component c){
-  components.add(c);
-  components.
+*/
+  public void addComponent(Component c){
+    components.add(c);
 }
 }
