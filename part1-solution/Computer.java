@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.HashMap;
 public class Computer {
 
 private HashMap<String,Component> configuration;
@@ -7,7 +8,7 @@ private HashMap<String,Component> configuration;
 //private Display theDisplay;
 
 public Computer(){
-configuration = new HashMap<>();
+configuration = new HashMap<String,Component>();
 //theProcessor= new Processor("INTEL",3000,5000,"x64");
 //theHardDisk= new HardDisk("WD","SSD",8000);
 //theDisplay= new Display("LG","LCD",10000,22);
@@ -40,13 +41,20 @@ System.out.println("\nDisplay_Manufacturer:"+theDisplay.getManufacturer()+"\nDis
 //   return sum;
 // }
 
+// public int totalCost(){
+//   int sum=0;
+//   Iterator it = configuration.entrySet().iterator();
+//       while (it.hasNext()) {
+//           Map.Entry pair = (Map.Entry)it.next();
+//           sum= sum + .getValue().getCost();
+// }
+// return sum;
+// }
+
 public int totalCost(){
   int sum=0;
-  Iterator it = configuration.entrySet().iterator();
-      while (it.hasNext()) {
-          Map.Entry pair = (Map.Entry)it.next();
-          sum= sum + (int) pair.getValue();
-}
-return sum;
+    for (Map.Entry<String,Component> hm : configuration.entrySet())
+    sum= sum + hm.getValue().getCost();
+    return sum;
 }
 }

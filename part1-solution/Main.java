@@ -1,7 +1,7 @@
 public class Main{
 
 
-public static void main(String[] args){
+public static void main(String[] args) throws ClassNotFoundException{
 /*
 System.out.println(c.totalCost( ));
 
@@ -33,7 +33,17 @@ cs.addComputer(c3);
 //cs.findMostExpensiveComputerv3().printComputerSummary();
 //cs.findMostExpensiveComputerv4().printComputerSummary();
 cs.addComponent(p);
+cs.addComponent(h);
+cs.addComponent(p);
+// c3.totalCost();
+System.out.println(cs.totalCostOfComponents());
 cs.totalCostOfComponents("Processor");
+c3.addComponent("HDD",h);
+System.out.println(c3.totalCost());
+
+
+// c3.addComponent("HDD",h);
+// System.out.println(c3.totalCost());
 
 }
 
